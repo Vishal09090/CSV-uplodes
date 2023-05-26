@@ -14,11 +14,11 @@ var storage = multer.diskStorage({
     cb(null, file.originalname);
   }
 });
-
+// mongodb://127.0.0.1:27017/csvdemos
 var uploads = multer({ storage: storage });
 
 //connect to db
-mongoose.connect('mongodb://127.0.0.1:27017/csvdemos', { useNewUrlParser: true })
+mongoose.connect('mongodb+srv://vishal0968:Vishal1234@cluster0.nmrndjw.mongodb.net/?retryWrites=true&w=majority', { useNewUrlParser: true })
   .then(() => console.log('connected to db'))
   .catch((err) => console.log(err))
 
